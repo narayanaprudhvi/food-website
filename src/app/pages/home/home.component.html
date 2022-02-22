@@ -1,0 +1,52 @@
+<div class="banner">
+    <div class="content">
+        <h1 class="mb-5"> Fresh cooked food<br> at your door steps </h1>
+        <a routerLink="menu"> ORDER NOW <i class="bi bi-arrow-right"></i> </a>
+    </div>
+</div>
+<div class="container mt-5 mb-4">
+    <h1 class="text-center mb-4"> how to get <span class="highlight"> fresh food </span> </h1>
+    <div class="row mt-5">
+        <div class="col-lg-4 mt-2">
+            <div class="stepbox">
+
+                <h1>1 </h1>
+                <p> select food </p>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 mt-2">
+            <div class="stepbox">
+                <h1>2 </h1>
+                <p> fill the details</p>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 mt-2">
+            <div class="stepbox">
+                <h1>3 </h1>
+                <p> your order delivered in minutes </p>
+            </div>
+        </div>
+        <div class="selectfood">
+            <h1> Please select your food here </h1>
+        </div>
+
+    </div>
+    <!--foodbox-->
+    <div class="container mt-4 mb-4">
+        <h1 class="text-center mt-3"> Customer's <span class="highlight"> Favourite Food </span> </h1>
+        <div class="row">
+            <div class="col-lg-3 mt-3" *ngFor="let fd of foodData">
+                <div class="foodbox" mt-3 mb-3>
+                    <img src="{{fd.foodImg}}">
+                    <h1> {{fd.foodname}} </h1>
+                    <p> {{fd.foodprice | currency:'INR'}} </p>
+                    <p class="buyBtn"> Buy Now <i class="bi bi-bag"></i> </p>
+                </div>
+            </div>
+         </div>
+        <a routerLink="menu" class="viewmorebtn"> view more <i class="bi bi-arrow-right"></i> </a>
+    </div>
